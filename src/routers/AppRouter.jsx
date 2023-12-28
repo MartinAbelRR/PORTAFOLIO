@@ -8,8 +8,8 @@ export const AppRouter = () => {
     <>
     <Template>
       <Routes>
-        <Route index element={<HomePage/>}/>
-        <Route path="/profile" element={<ProfilePage/>} />
+        <Route path="/PORTAFOLIO" element={<HomePage />}/>
+        <Route path="/PORTAFOLIO/profile" element={<ProfilePage/>} />
       </Routes>    
     </Template>
     </>

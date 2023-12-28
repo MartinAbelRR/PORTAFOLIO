@@ -6,7 +6,7 @@ export const Button = ({nameRoute = "#"}) => {
   return (
     <a 
       className={`bg-rojo cursor-pointer font-bold inline-block p-1 rounded-md transition-colors hover:bg-rojo/10`}      
-      onClick={() => navigate(`/${nameRoute}`)}
+      onClick={() => navigate(`/PORTAFOLIO/${nameRoute}`)}
       >More information <span className=''>&rarr;</span>
     </a>
   )
