@@ -1,0 +1,22 @@
+* Colección moderna de fragmentos de fondos.
+- https://bg.ibelick.com/
+
+* Generador de imágenes 3d.
+- https://www.bing.com/?setlang=es
+
+* Generador de imágenes vectoriales.
+- https://app.recraft.ai/project/ef7d452d-7511-4688-8518-8c0e8610a82c
+
+* Iconos svg gratis.
+  https://icon-icons.com/es/icono/github-logo/73546
+
+* Configurar de react-router-dom
+1. Instalar react-router-dom
+   yarn add react-router-dom
+   
+2. En el main envolver el componente _NAME_App.
+   <BrowserRouter>
+      <App />
+    </BrowserRouter>
+
+3. Crear un compontente AppRouter y colocar en _NAME_App.
