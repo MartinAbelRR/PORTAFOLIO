@@ -49,19 +49,19 @@ export const aboutMe: Content = {
 export const dataImages: Content[] = [
     {
         title: "udemy",
-        image: '/public/udemy.png'
+        image: '/udemy.png'
     },
     {
         title: "dmc",
-        image: '/public/dmc.jpg'
+        image: '/dmc.jpg'
     },
     {
         title: "youtube",
-        image: '/public/youtube.jpg'
+        image: '/youtube.jpg'
     },
     {
         title: "unmsm",
-        image: '/public/unmsm.jpg'
+        image: '/unmsm.jpg'
     }
 ]    
 
@@ -190,7 +190,7 @@ export const proyects: Proyect[] = [
     {
         id: '1',
         description: "BlogGo is an exciting project that seeks to revolutionize the blogging experience, focusing on efficiency, security and flexibility. With the backend developed in Go, a powerful database and a strong user authentication system, BlogGo is designed to provide a robust and easy-to-use environment for bloggers and readers alike.",
-        image: '/public/blog-back.jpg',
+        image: '/blog-back.jpg',
         isPage: false,
         ref: 'https://github.com/MartinAbelRR/GO_BLOGBACKEND',
         technologies: [Goland],
@@ -199,7 +199,7 @@ export const proyects: Proyect[] = [
     {
         id: '2',
         description: "BlogGo is a frontend development project that utilizes the power of React along with the Zustand and Axios libraries to create a fluid and dynamic user experience. This project focuses on efficient application state management and seamless integration with external services to provide users with a modern and highly responsive platform.",
-        image: '/public/blog-front.jpg',
+        image: '/blog-front.jpg',
         isPage: true,
         ref: 'https://github.com/MartinAbelRR/GO_BLOGFRONTEND',
         refPage: 'https://martinabelrr.github.io/GO_BLOGFRONTEND/',   
@@ -229,7 +229,7 @@ export const proyects: Proyect[] = [
     {
         id: '5',
         description: "The DjangoReact CRUD System project is a complete web application that combines the power of the backend developed with Python and Django Rest Framework (DRF), and the frontend built with React. This system offers CRUD (Create, Read, Update, Delete) operations in an efficient way, providing a modern and functional user interface to manage data dynamically.",
-        image: '/public/crud.png',
+        image: '/crud.png',
         isPage: false,
         ref: 'https://github.com/MartinAbelRR/CRUD_APP',        
         technologies: [Python, Javascript, React],
