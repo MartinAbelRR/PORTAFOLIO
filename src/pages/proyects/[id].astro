@@ -1,0 +1,50 @@
+---
+import Layout from '../../layouts/Layout.astro'; 
+import { proyects }  from "../../data/data";
+import Github from '../../icons/Github.astro';
+
+const { id } = Astro.params;
+const proyect = proyects.find(proyect => proyect.id === id);
+---
+<Layout title='proyects'>
+        <section class="flex flex-col items-center justify-center py-8 space-y-4 xl:flex-row">        
+            <div class="flex-1 space-y-4">
+                <h1 class="font-bold text-skyblue-add text-2xl md:text-4xl" transition:name={`title ${id}`}>{proyect?.title}</h1>
+                <p class="font-light pr-12 text-xl md:text-2xl" transition:name={`paragraph ${id}`}>{proyect?.description}</p>
+                <div class="flex gap-4 items-center xl:flex-col xl:items-start">
+                    <h2 class="font-bold text-dark-yellow-add text-xl md:text-2xl">Technologies</h2>
+                    <ul class="flex flex-wrap gap-x-4">
+                        {
+                            proyect?.technologies?.map((Technologie) => (
+                                <li class="h-12 w-12 ">
+                                    <Technologie />
+                                </li>
+                            ))
+                        }
+                    </ul>
+                </div>                
+            </div>
+                
+            <img alt={`${proyect?.title}`} class={'aspect-square max-w-[300px] rounded-md self-center w-full md:max-w-[400px]'} src={proyect?.image} transition:name={`image ${id}`}  />
+        </section>
+    
+        <footer class="flex justify-center">            
+            <div class="flex gap-x-2 stroke-white">          
+                <Github href={`${proyect?.ref}`}/>     
+                {
+                    proyect?.isPage && (
+                        <a class="duration-500 hover:bg-white-add p-2 rounded-full transition" href={`${proyect?.refPage}`} target="_blank" rel="noopener noreferrer">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="duration-500 hover:stroke-black h-16 stroke-white transition w-16" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+                                <path d="M3.6 9h16.8" />
+                                <path d="M3.6 15h16.8" />
+                                <path d="M11.5 3a17 17 0 0 0 0 18" />
+                                <path d="M12.5 3a17 17 0 0 1 0 18" />
+                            </svg>
+                        </a>
+                    )
+                }
+            </div>
+        </footer>        
+</Layout>

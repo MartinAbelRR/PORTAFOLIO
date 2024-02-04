@@ -1,0 +1,9 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { dataImages } from "../data/data";
+import { Carousel } from "../components/Carousel.jsx";
+---
+
+<Layout title="education">
+    <Carousel images={dataImages} client:load />    
+</Layout>

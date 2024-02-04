@@ -1,0 +1,30 @@
+---
+import type { Content } from '../data/data.ts'
+import { Image } from 'astro:assets'
+
+interface Props {
+    proyect: Content
+}
+
+const { proyect } = Astro.props
+const { id, title, description, image } = proyect
+
+---
+
+<!-- shadow-red-add/5 shadow-xl -->
+<article class="bg-red-add/5 duration-300 hover:bg-transparent hover:shadow-red-add/50  hover:shadow-xl mx-auto overflow-hidden rounded-md transition w-[90%]">
+    <a class="flex flex-col md:flex-row" href={`/proyects/${id}`}>     
+        <div class="flex flex-col font-light flex-1 justify-center p-4 space-y-4 xl:self-start"> 
+            <h2 class="font-bold text-center text-skyblue-add text-3xl xl:text-4xl xl:text-left" transition:name={`title ${id}`}>{title}</h2>            
+            <p class="duration-300 hidden text-2xl text-white-add xl:block" transition:name={`paragraph ${id}`} >{description}</p>
+        </div>   
+
+        <img alt={`${title}`} class={'aspect-square h-full object-cover rounded-b-md w-full md:max-w-[300px] md:rounded-none md:rounded-r-md '} src={`${image}`} transition:name={`image ${id}`} />
+    </a>
+</article>
+
+<style>
+    article:hover > a > div > p {
+        color: #F25757;
+    }
+</style>

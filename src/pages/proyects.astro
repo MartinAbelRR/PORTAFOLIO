@@ -1,0 +1,16 @@
+---
+import Article  from "../components/Article.astro";
+import Layout from "../layouts/Layout.astro";
+
+import { proyects } from "../data/data.ts";
+---
+
+<Layout title="proyects">
+    <section class="flex flex-col gap-6 min-h-screen py-8">
+        {
+            proyects.map((proyect) => (
+                <Article proyect={proyect} />
+            ))
+        }
+    </section>
+</Layout>

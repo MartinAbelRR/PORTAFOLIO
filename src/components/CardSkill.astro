@@ -1,0 +1,27 @@
+---
+import type { Skill } from '../data/data.ts';
+
+interface Props {
+    skill: Skill;
+}
+
+const { skill } = Astro.props;
+const { description, percent, technologie: Technologie, title } = skill;
+---
+
+<li class="bg-yellow-add/5 px-8 py-16 rounded-br-xl rounded-tl-xl space-y-3 shadow-yellow-add shadow-md">
+    <div class="flex justify-between">
+        <div class="w-16">
+            <Technologie />        
+        </div>
+        <h1 class="duration-300 font-bold text-4xl transition-colors">{percent}%</h1>
+    </div>
+    <h2 class="font-bold text-green-600 text-2xl xl:text-4xl">{title}</h2>    
+    <p class="font-light text-xl text-white-add">{description}</p>
+</li> 
+
+<style>
+    li:hover h1{
+        color: #f6e05e;
+    }
+</style>

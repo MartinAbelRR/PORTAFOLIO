@@ -1,0 +1,19 @@
+---
+import { mySkills } from "../data/data";
+
+import CardSkill from "../components/CardSkill.astro";
+import Layout from "../layouts/Layout.astro";
+
+---
+
+<Layout title="skills">
+    <div class="bg-white/5 p-4">        
+        <ul class="gap-4 grid px-2 xl:grid-cols-2">
+            {
+                mySkills.map((skill) => (
+                <CardSkill skill={skill}/>
+                ))
+            }
+        </ul>          
+    </div>
+</Layout>
