@@ -12,27 +12,27 @@ export const Carousel = ({images}) => {
   return (
     <section className='py-8'>
       <Swiper    
-        modules={[EffectCoverflow, Navigation, Pagination]} 
-        effect='coverflow'
         centeredSlides={true}
-        grabCursor={true} 
-        spaceBetween={30}
         coverflowEffect={{
-          rotate: 0,
-          stretch: 0,
           depth: 100,
           modifier: 2.5,
+          rotate: 0,
+          stretch: 0,
         }}
-        slidesPerView={'auto'}  
-        navigation={true}        
+        effect='coverflow'
+        grabCursor={true} 
         loop={true} 
+        modules={[EffectCoverflow, Navigation, Pagination]} 
+        navigation={true}        
         pagination={{ clickable: true}}       
+        slidesPerView={'auto'}  
+        spaceBetween={30}
       >
         {
           images.map((image, index) => {
             return (
               <SwiperSlide key={index}>
-                <img src={`${image?.image}`} alt={`${image.title}`} className='w-[700px] h-[700px] mx-auto'/>
+                <img alt={`${image.title}`} className='w-[700px] h-[700px] mx-auto' src={`${image?.image}`} />
               </SwiperSlide>
             );
           })

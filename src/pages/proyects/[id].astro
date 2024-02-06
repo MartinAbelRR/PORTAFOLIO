@@ -1,11 +1,14 @@
 ---
-import Layout from '../../layouts/Layout.astro'; 
-import { proyects }  from "../../data/data";
 import Github from '../../icons/Github.astro';
+import Layout from '../../layouts/Layout.astro'; 
+
+import { proyects }  from "../../data/data";
 
 const { id } = Astro.params;
+
 const proyect = proyects.find(proyect => proyect.id === id);
 ---
+
 <Layout title='proyects'>
         <section class="flex flex-col items-center justify-center py-8 space-y-4 xl:flex-row">        
             <div class="flex-1 space-y-4">

@@ -1,9 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { dataImages } from "../data/data";
+
+import { images } from "../data/data";
+
 import { Carousel } from "../components/Carousel.jsx";
 ---
 
 <Layout title="education">
-    <Carousel images={dataImages} client:load />    
+    <Carousel images={images} client:load />    
 </Layout>

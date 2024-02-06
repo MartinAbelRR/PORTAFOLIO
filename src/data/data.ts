@@ -1,38 +1,31 @@
-import HTML5 from '../icons/HTML5.astro';
-import CSS3 from '../icons/CSS3.astro';
-import Astro from '../icons/Astro.astro';
-import Tailwind from '../icons/Tailwind.astro';
-import SQL from '../icons/SQL.astro';
 import Anaconda from '../icons/Anaconda.astro';
+import Astro from '../icons/Astro.astro';
+import CSS3 from '../icons/CSS3.astro';
 import Django from '../icons/Django.astro';
-import GithubStatic from '../icons/GithubStatic.astro';
-import Git from '../icons/Git.astro';
-import React from '../icons/React.astro';
-import Goland from '../icons/Goland.astro';
-import Typescript from '../icons/Typescript.astro';
+import HTML5 from '../icons/HTML5.astro';
 import Javascript from '../icons/Javascript.astro';
+import Git from '../icons/Git.astro';
+import GithubStatic from '../icons/GithubStatic.astro';
+import Goland from '../icons/Goland.astro';
 import Python from '../icons/Python.astro';
+import React from '../icons/React.astro';
+import SQL from '../icons/SQL.astro';
+import Tailwind from '../icons/Tailwind.astro';
+import Typescript from '../icons/Typescript.astro';
 
-export interface MyInformation {
-    description: string;
-    labels: string[];
-    image: any;
-    title: string;
-}
 
 export interface Content {
     id?: string;
     description?: string;
     image?: string;
-    name?: string;
     ref?: string;
-    technologies?: any[];
+    technologies?: string[] | any[];
     title?: string;
 }
 
 export interface Skill extends Content {
-    technologie: any;
     percent: number;
+    technologie: any;
 }
 
 export interface Proyect extends Content {
@@ -41,12 +34,12 @@ export interface Proyect extends Content {
 }
 
 export const aboutMe: Content = {
-    name: "Martin Reyes",
+    title: "Martin Reyes",
     description: "I am a systems engineer with a fervor for software development, a data science enthusiast and a perpetual learner of new technologies. I am always ready to face challenges, grow and contribute to the exciting world of technology - join me on this journey of innovation and discovery!",
     image: '/about-me.png'
 }
 
-export const dataImages: Content[] = [
+export const images: Content[] = [
     {
         title: "udemy",
         image: '/udemy.png'
@@ -65,34 +58,34 @@ export const dataImages: Content[] = [
     }
 ]    
 
-export const myInformation: MyInformation[] = [
+export const information: Content[] = [
     {
-        labels: ["Hello World", "Hola Mundo"],
+        technologies: ["Hello World", "Hola Mundo"],
         title: "about me",
         description: "A system engineer passionate about creating technology solutions, with experience in both fronted and backend development.",
         image: '/profile-1.png'
     },
     {
-        labels: ["Efficiency", "Experience"],
+        technologies: ["Efficiency", "Experience"],
         title: "proyects",
         description: "¡Discover my most outstanding projects that I have done!",
         image: '/profile-2.png'
     },
     {
-        labels: ["HTML5", 'CSS3', 'JS', 'TS', 'Go', 'React', 'TailwindCSS', 'Python', 'Django', 'Git', 'Github', 'SQL'],
+        technologies: ["HTML5", 'CSS3', 'JS', 'TS', 'Go', 'React', 'TailwindCSS', 'Python', 'Django', 'Git', 'Github', 'SQL'],
         title: "skills",
         description: "HTML5, CSS3, JS, TypeScript, React, Git, GitHub. I merge technologies to create captivating and efficient digital experiences.",
         image: '/proyect.png'
     },
     {
-        labels: ["UNMSM", 'Udemy', 'DMC', 'Youtube'],
+        technologies: ["UNMSM", 'Udemy', 'DMC', 'Youtube'],
         title: "education",
         description: "Solid engineering background, prepared for technological challenges.",
         image: '/profile-3.png'
     }
 ]
 
-export const mySkills: Skill[] = [
+export const skills: Skill[] = [
     {
         id: '1',
         description: "I am an expert developer in HTML5, the fundamental standard for the creation of web pages.",

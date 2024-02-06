@@ -4,15 +4,15 @@ import  Github from '../icons/Github.astro';
 import Layout from '../layouts/Layout.astro';
 import Linkedin from '../icons/Linkedin.astro';
 
-import { myInformation } from '../data/data';
+import { information } from '../data/data';
 ---
 
 <Layout title="Portafolio Martin Reyes">
 	<section class="gap-4 grid grid-cols-[repeat(auto-fit,minmax(min(100%,300px),1fr)) min-h-screen py-6">
-		<Card href='about-me' myInformation={myInformation[0]} area='md:col-span-5' colorText='text-red-add'/>
-		<Card href='proyects' myInformation={myInformation[1]} area='md:col-span-2 md:col-start-6' colorText='text-skyblue-add'/>
-		<Card href='skills' myInformation={myInformation[2]} area='md:col-span-3 md:row-span-2' colorText='text-red-add'/>
-		<Card href='education' myInformation={myInformation[3]} area='md:col-span-4 md:col-start-4' colorText='text-yellow-add'/> <!-- shadow='hover:drop-shadow-[1px_1px_5px_#F25757] -->
+		<Card href='about-me' myInformation={information[0]} area='md:col-span-5' colorText='text-red-add'/>
+		<Card href='proyects' myInformation={information[1]} area='md:col-span-2 md:col-start-6' colorText='text-skyblue-add'/>
+		<Card href='skills' myInformation={information[2]} area='md:col-span-3 md:row-span-2' colorText='text-red-add'/>
+		<Card href='education' myInformation={information[3]} area='md:col-span-4 md:col-start-4' colorText='text-yellow-add'/> <!-- shadow='hover:drop-shadow-[1px_1px_5px_#F25757] -->
 		<article class="bg-skyblue-add/10 group hover:scale-90 min-h-28 overflow-hidden px-6 py-2 relative rounded-lg transition-transform md:col-span-4" transition:animate="slide">
 			<div class="duration-500 flex group-hover:opacity-0 h-full items-center justify-center transition-opacity">
 				<h1 class="font-bold text-skyblue-add text-3xl lg:text-5xl">Social Networking</h1>

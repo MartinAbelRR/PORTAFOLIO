@@ -1,15 +1,15 @@
 ---
-import type { MyInformation } from '../data/data.ts';
+import type { Content } from '../data/data.ts';
 
 interface Props {	
 	area: string;
 	colorText: string;
 	href: string;
-	myInformation: MyInformation;
+	myInformation: Content;
 }
 
 const { area, colorText, href, myInformation } = Astro.props;
-const { description, image, labels, title } = myInformation;
+const { description, image, technologies, title } = myInformation;
 ---
 
 <article class={`${area} bg-skyblue-add/10 duration-300 hover:scale-90 rounded-lg transition-transform`} transition:animate="slide">	
@@ -17,8 +17,8 @@ const { description, image, labels, title } = myInformation;
 		<div class="duration-500 flex flex-col group-hover:opacity-0 justify-between max-w-lg p-2 transition">
 			<div class=`${colorText} flex flex-wrap font-bold gap-2`>
 				{
-					labels.map((label) => (
-						<p class={`bg-black/20 h-max p-1 rounded-lg w-max`}>{label}</p>
+					technologies?.map((technologie) => (
+						<p class={`bg-black/20 h-max p-1 rounded-lg w-max`}>{technologie}</p>
 					))
 				}								
 			</div>
@@ -41,9 +41,4 @@ const { description, image, labels, title } = myInformation;
 			</div>
 		</figcaption>
 	</a>
-
 </article>
-
-<style>
-	
-</style>

@@ -3,21 +3,21 @@ import Layout from "../layouts/Layout.astro";
 
 import { aboutMe } from "../data/data.ts";
 
-const { name, description, image } = aboutMe;
+const { title, description, image } = aboutMe;
 ---
 
 <Layout title="About-me">
     <section class="gap-4 flex flex-col h-[900px] items-center justify-center py-8 md:flex-row">
         <div class="flex flex-col flex-1 space-y-4">
             <h1 class="animation-show font-bold opacity-0 text-center text-3xl title-show md:text-left md:text-5xl">I'm 
-                <span class="text-red-add">{name}</span>
+                <span class="text-red-add">{title}</span>
             </h1>
             <p class="animation-show font-light opacity-0 paragraph-show text-skyblue-add text-xl md:text-3xl">{description}</p>
 
             
         </div>
         <picture class="flex-1 relative -order-1 md:order-1">                        
-            <img src={`${image}`} alt={`${name}`} class={'animation-circle-full aspect-square max-w-[500px] mx-auto object-cover rotate-0 rounded-full w-full'} />
+            <img src={`${image}`} alt={`${title}`} class={'animation-circle-full aspect-square max-w-[500px] mx-auto object-cover rotate-0 rounded-full w-full'} />
         </picture>
     </section>
 </Layout>   
